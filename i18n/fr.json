@@ -1,0 +1,26 @@
+[
+  {
+    "id": "about",
+    "other": "À propos"
+  },
+  {
+    "id": "skills",
+    "other": "Compétences"
+  },
+  {
+    "id": "creations",
+    "other": "Projets"
+  },
+  {
+    "id": "experience",
+    "other": "Expérience"
+  },
+  {
+    "id": "education",
+    "other": "Formation"
+  },
+  {
+    "id": "contact",
+    "other": "Contact"
+  }
+]

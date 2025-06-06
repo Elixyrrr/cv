@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time Series on Ilyes Khedhiri</title>
+    <link>http://localhost:1313/tags/time-series/</link>
+    <description>Recent content in Time Series on Ilyes Khedhiri</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 15 Apr 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Imputation des valeurs manquantes dans les séries temporelles d’électricité</title>
+      <link>http://localhost:1313/projects/creations/imputation/</link>
+      <pubDate>Tue, 15 Apr 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/creations/imputation/</guid>
+      <description>&lt;p&gt;Ce projet consiste à combler les valeurs manquantes dans des séries temporelles de consommation électrique résidentielle, mesurées toutes les 30 minutes. Nous disposons de 3 127 séries d’entraînement de 12 864 relevés chacune, sans valeurs manquantes, puis de jeux de test comportant environ 30 % de mesures masquées aléatoirement. Pour restaurer ces données, nous avons implémenté et comparé plusieurs approches : méthodes statistiques classiques (interpolations, moyennes mobiles), algorithmes de machine learning (régressions, forêts aléatoires) et modèles de deep learning (LSTM, CNN, autoencodeurs). Chaque méthode est évaluée à l’aide de l’erreur moyenne absolue (MAE) entre les valeurs prédictes et réelles, afin de déterminer la solution la plus efficace pour reconstituer fidèlement les courbes de consommation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+[
+  {
+    "grouping": "Langages de programmation",
+    "skills": [
+      { "name": "C", "class": "devicon-c-plain" },
+      { "name": "C++", "class": "devicon-cplusplus-plain" },
+      { "name": "Python", "class": "devicon-python-plain" },
+      { "name": "Java", "class": "devicon-java-plain" },
+      { "name": "HTML / CSS", "class": "devicon-html5-plain" },
+      { "name": "SQL", "class": "devicon-mysql-plain" }
+    ]
+  },
+
+  {
+    "grouping": "Data Engineering & BI",
+    "skills": [
+      { "name": "Apache Spark", "class": "devicon-apache-plain" },
+      { "name": "Power BI", "icon": "code" },
+      { "name": "RESTful APIs", "class": "devicon-nodejs-plain-wordmark" }
+    ]
+  },
+
+  {
+    "grouping": "Bases de données",
+    "skills": [
+      { "name": "Microsoft SQL Server", "class": "devicon-microsoftsqlserver-plain" },
+      { "name": "MongoDB", "class": "devicon-mongodb-plain" }
+    ]
+  },
+
+  {
+    "grouping": "Outils & IDE",
+    "skills": [
+      { "name": "Visual Studio", "class": "devicon-visualstudio-plain" },
+      { "name": "VS Code", "class": "devicon-vscode-plain" },
+      { "name": "Eclipse", "class": "devicon-eclipse-plain" },
+      { "name": "Postman", "class": "devicon-postman-plain" }
+    ]
+  }
+]

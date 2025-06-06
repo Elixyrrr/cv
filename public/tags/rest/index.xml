@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>REST on Ilyes Khedhiri</title>
+    <link>http://localhost:1313/tags/rest/</link>
+    <description>Recent content in REST on Ilyes Khedhiri</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 15 May 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/rest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jeu d’échecs en ligne</title>
+      <link>http://localhost:1313/projects/creations/chess/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/creations/chess/</guid>
+      <description>&lt;p&gt;Le projet consistait à créer une application web de jeu d’échecs conforme à une architecture REST (Répresentationnal State Transfer) et au pattern MVC (Modèle-Vue-Contrôleur). Les deux joueurs peuvent s’affronter en temps réel via Socket.IO, et chaque partie est sauvegardée dans MongoDB (ou SQL) pour être reprise coup par coup. Des fonctionnalités annexes, comme le chronomètre, la demande de partie à l’adversaire et la possibilité de rejouer un coup, ont été implémentées. En bonus, une IA basique a été développée pour permettre à l’utilisateur de jouer contre l’ordinateur. Les technologies employées incluent Node.js, Express, Socket.IO et MongoDB.&#xA;Le site prend un peu de temps à se lancer.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

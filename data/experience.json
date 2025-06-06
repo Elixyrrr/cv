@@ -1,0 +1,22 @@
+[
+  {
+    "role": "Babysitter",
+    "company": "Famille – Garde à domicile",
+    "summary": "Garde de deux enfants de 2 et 3 ans : organisation d’activités ludiques, aide aux repas et respect des routines quotidiennes.",
+    "range": "Juillet 2021 • 1 mois"
+  },
+
+  {
+    "role": "Stage (Seconde)",
+    "company": "Alter Way, Saint-Cloud (92)",
+    "summary": "- Découverte de plusieurs métiers de l’informatique :\n  - Web Design\n  - Cybersécurité\n  - Administration Cloud",
+    "range": "Février 2018 • 2 semaines"
+  },
+
+  {
+    "role": "Stage (3ᵉ)",
+    "company": "Global Knowledge, Rueil-Malmaison (92)",
+    "summary": "- Configuration de caméras de surveillance\n- Réinstallation de systèmes d’exploitation Windows / Linux",
+    "range": "Mars 2017 • 1 semaine"
+  }
+]

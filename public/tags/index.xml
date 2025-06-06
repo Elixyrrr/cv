@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ilyes Khedhiri</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Ilyes Khedhiri</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Sat, 31 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Learning</title>
+      <link>http://localhost:1313/tags/deep-learning/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FAISS</title>
+      <link>http://localhost:1313/tags/faiss/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/faiss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Knowledge Graph</title>
+      <link>http://localhost:1313/tags/knowledge-graph/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/knowledge-graph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LangChain</title>
+      <link>http://localhost:1313/tags/langchain/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/langchain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MongoDB</title>
+      <link>http://localhost:1313/tags/mongodb/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NLP</title>
+      <link>http://localhost:1313/tags/nlp/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/nlp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>http://localhost:1313/tags/rag/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Base Bayésienne</title>
+      <link>http://localhost:1313/tags/base-bay%C3%A9sienne/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/base-bay%C3%A9sienne/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Big Data</title>
+      <link>http://localhost:1313/tags/big-data/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/big-data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Express</title>
+      <link>http://localhost:1313/tags/express/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/express/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hadoop</title>
+      <link>http://localhost:1313/tags/hadoop/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hadoop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hive</title>
+      <link>http://localhost:1313/tags/hive/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/tags/machine-learning/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node.js</title>
+      <link>http://localhost:1313/tags/node.js/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/node.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>REST</title>
+      <link>http://localhost:1313/tags/rest/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Socket.IO</title>
+      <link>http://localhost:1313/tags/socket.io/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/socket.io/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spark</title>
+      <link>http://localhost:1313/tags/spark/</link>
+      <pubDate>Thu, 15 May 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/spark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Time Series</title>
+      <link>http://localhost:1313/tags/time-series/</link>
+      <pubDate>Tue, 15 Apr 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/time-series/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agile</title>
+      <link>http://localhost:1313/tags/agile/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/agile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CI/CD Pipelines</title>
+      <link>http://localhost:1313/tags/ci/cd-pipelines/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ci/cd-pipelines/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Continuous Delivery</title>
+      <link>http://localhost:1313/tags/continuous-delivery/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/continuous-delivery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Continuous Integration</title>
+      <link>http://localhost:1313/tags/continuous-integration/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/continuous-integration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Culture</title>
+      <link>http://localhost:1313/tags/culture/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/culture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apache</title>
+      <link>http://localhost:1313/tags/apache/</link>
+      <pubDate>Thu, 01 Jan 2009 14:09:10 +0000</pubDate>
+      <guid>http://localhost:1313/tags/apache/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redirect</title>
+      <link>http://localhost:1313/tags/redirect/</link>
+      <pubDate>Thu, 01 Jan 2009 14:09:10 +0000</pubDate>
+      <guid>http://localhost:1313/tags/redirect/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rewrite</title>
+      <link>http://localhost:1313/tags/rewrite/</link>
+      <pubDate>Thu, 01 Jan 2009 14:09:10 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rewrite/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssl</title>
+      <link>http://localhost:1313/tags/ssl/</link>
+      <pubDate>Thu, 01 Jan 2009 14:09:10 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ssl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>http://localhost:1313/tags/web-development/</link>
+      <pubDate>Thu, 01 Jan 2009 14:09:10 +0000</pubDate>
+      <guid>http://localhost:1313/tags/web-development/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

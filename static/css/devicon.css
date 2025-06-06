@@ -1,0 +1,14 @@
+/* Devicon CSS */
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
+
+/* Additional styling for devicon icons */
+.devicon {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+/* Ensure backward compatibility with old devicons class */
+.devicons {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,19 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="{{ .Scratch.Get "sectionId" }}">
+  <div class="my-auto" id="projects-content">
+    <div class=" pb-2 pt-3">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ .Content | replaceRE "<p>" "<p class=\"lead\">" | safeHTML  }}      
+    </div>
+  
+    {{ $featuredPages := where .Pages "Params.featured" true }}
+    {{ range $featuredPages }}
+      {{ partial (printf "%s%s" .Section "Summary") . }}
+    {{ end }}
+  </div>
+  {{ if gt .Pages $featuredPages }}
+    <div class="my-auto">
+      <h3>Listes des Projets</h3>
+      <p>Voir  <a href="{{ .Permalink }}">tous les {{ .Title | pluralize }}</a> </p>
+    </div>
+  {{ end }}
+</section>

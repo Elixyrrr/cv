@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FAISS on Ilyes Khedhiri</title>
+    <link>http://localhost:1313/tags/faiss/</link>
+    <description>Recent content in FAISS on Ilyes Khedhiri</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Sat, 31 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/faiss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Évaluation de la qualité d’un graphe de connaissance avec un pipeline RAG</title>
+      <link>http://localhost:1313/projects/creations/kg/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/creations/kg/</guid>
+      <description>&lt;p&gt;RAG (Retrieval-Augmented Generation) « &lt;!-- raw HTML omitted --&gt;est une méthode qui enrichit les prompts du LLM avec un contexte pertinent récupéré pour réduire les hallucinations et améliorer la précision factuelle.&lt;!-- raw HTML omitted --&gt; »  .Dans ce projet on utilise Ollama pour exécuter un LLM local qui, à partir de triplets récupérés par FAISS depuis un graphe de connaissance, va évaluer la qualité du graphe en comparant les réponses générées aux données sources.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
