@@ -1,20 +1,40 @@
 {
-  "title": "Application Big Data",
-  "date": "2025-05-15T12:00:00",
+  "title": "Bayesian Database – Application Big Data",
+  "date": "2025-05-15",
   "range": "Janvier – Avril 2025",
+  "encadrants": ["Dragutin Jastrebic", "Koviljka"],
+  "categories": ["app. scientifique"],
   "image": "/img/skills/bigdata.png",
   "description": "Conception et prototypage d’un logiciel Big Data (« Bayesian Database ») pour collecter, distribuer et analyser de grands volumes de données hétérogènes via Hadoop et Machine Learning.",
-  "tags": ["Big Data", "Hadoop", "Base Bayésienne", "Machine Learning", "Spark", "Hive"],
-  "fact": "",
+  "tags": ["Big Data", "Hadoop", "Machine Learning", "Bayesian Network", "Spark", "Hive"],
   "featured": false
 }
 
-Les bases de données traditionnelles Oracle, SQL Server DB2 ont été conçues pour garantir l'accès concurrent aux données, l'aspect transactionnel des traitements, pour pouvoir accepter des centaines de sessions utilisateurs, pour fournir des métriques précises sur l'utilisation du système au niveau de processeur, mémoire, réseau.
+## Contexte & objectifs
 
-Ces bases de données sont donc plus lentes en terme de consultation de données massives et non structurées.
+Les bases de données traditionnelles (Oracle, SQL Server, DB2) offrent de l’ACID et un accès concurrent, mais sont lentes pour le traitement de très gros volumes non structurés.  
+Hadoop, grâce au sharding et à HDFS/MapReduce, distribue le calcul sur plusieurs nœuds pour traiter massivement des données.  
+L'objectif étant développer un prototype de « Bayesian Database » capable de collecter et d’analyser les données d’entreprise en combinant Hadoop avec des méthodes de Machine Learning bayésien.
 
-Des nouvelles technologies comme Hadoop sont orientées plus vers la consultation des données, traitement massif des données, structurées ou non structurés.
+## Stack technique
 
-Hadoop implémente la technologie du sharding, qui distribue le travail sur plusieurs nœuds et permet de cette façon de traiter une masse de données importante. Les outils qui accompagnent Hadoop sont Hive, Hbase, Spark.
+- **Langages & framework Web** : JavaScript, React, HTML/CSS, Flask (Python)  
+- **Base de données & Big Data** : PostgreSQL, Hadoop (HDFS/MapReduce), Hive (ou Cassandra)  
+- **Machine Learning & Bayésien** : Scikit-Learn (Lasso & Ridge), NetworkX (réseaux bayésiens), Spark MLlib  
 
-Ce projet porte sur le développement d'un nouveau logiciel orientée Big Data, appelé Bayesian Database, qui va collectionner les données liées aux différentes applications d’une entreprise et les traiter via les méthodes Machine Learnng en utilisant Hadoop.
+## Réalisation
+1. **Architecture distribuée** – Ingestion et sharding des données via HDFS  
+2. **Moteur bayésien** – Modélisation et inférence de réseaux bayésiens avec NetworkX  
+3. **Méthodes de régression** – Implémentation de Lasso et Ridge pour extraire la structure des relations statistiques  
+4. **Indépendance conditionnelle** – Exécution de procédures SQL pour tester les dépendances entre variables  
+5. **Visualisation interactive** – Interface NetworkX intégrée au frontend React pour afficher et manipuler graphiquement les relations ![](/img/skills/graphb.png#floatrightb)
+
+## Points forts
+
+- **Scalabilité** : Traitement distribué de To de données  
+- **Bayésien & régularisation** : Combinaison de modèles probabilistes et de régression pénalisée  
+- **Visualisation** : Exploration interactive des réseaux via NetworkX  
+
+## Points faibles
+
+- **La suite d'un projet** : Nécessité d’appréhender et d’adapter une architecture complexe pour poursuivre le développement.

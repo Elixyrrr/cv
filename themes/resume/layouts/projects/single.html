@@ -8,4 +8,25 @@
     {{ partial "techtags" . }}
   </div>
 </section>
+<style>
+img[src$="#floatright"] {
+  float: right;
+  margin: 0 0 1em 1em;
+  width: 50%;
+}
+
+img[src$="#floatbottom"] {
+  display: left;
+  margin: 2em auto 1em auto; /* Centré horizontalement avec marge en haut */
+  max-width: 20%; /* Taille réduite */
+  width: 30%;
+  height: auto;
+  clear: both; /* S'assure qu'elle se place après les autres éléments */
+}
+img[src$="#floatrightb"] {
+  float: auto;
+  margin: 0 0 1em 1em;
+  width: 40%;
+}
+</style>
 {{ end }}
