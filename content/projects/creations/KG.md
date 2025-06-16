@@ -61,3 +61,4 @@ Pour ce faire on a utilisé:
 Lors de l’événement **[IA Innovation](https://www.ai4europe.eu/)**, j'ai pu accéder à leur tool **[AI-builder](https://aiexp.ai4europe.eu/)** pour créer différents pipelines de RAG et évaluer leur efficacité sans aucune ligne de code à l'aide de **[Graphene](https://projects.eclipse.org/projects/technology.graphene)**
 ![](/img/skills/rag_nocode.png#floatbottom)
 
+Auteur: Ilyes Khedhiri

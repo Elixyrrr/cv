@@ -10,4 +10,4 @@
 
 Ce projet consistait à développer un outil capable d’analyser des contenus publiés sur les réseaux sociaux pour détecter des messages témoignant de signes dépressifs, en utilisant des techniques de deep learning tels que "FCL" ou bien de machine learning tels que "SVM" et "Random Forest"
 
-
+Auteur: Ilyes Khedhiri , Muzzammil Mougamadou , Ilyes Tahar-Lehlour, Thibhan Ponnampalam

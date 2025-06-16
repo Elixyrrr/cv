@@ -2,14 +2,11 @@
   "title": "Bayesian Database – Application Big Data",
   "date": "2025-05-15",
   "range": "Janvier – Avril 2025",
-  "encadrants": ["Dragutin Jastrebic", "Koviljka"],
-  "categories": ["app. scientifique"],
   "image": "/img/skills/bigdata.png",
-  "description": "Conception et prototypage d’un logiciel Big Data (« Bayesian Database ») pour collecter, distribuer et analyser de grands volumes de données hétérogènes via Hadoop et Machine Learning.",
+  "description": "Conception et prototypage d'un logiciel Big Data (« Bayesian Database ») pour collecter, distribuer et analyser de grands volumes de données hétérogènes via Hadoop et Machine Learning.\n",
   "tags": ["Big Data", "Hadoop", "Machine Learning", "Bayesian Network", "Spark", "Hive"],
   "featured": false
 }
-
 ## Contexte & objectifs
 
 Les bases de données traditionnelles (Oracle, SQL Server, DB2) offrent de l’ACID et un accès concurrent, mais sont lentes pour le traitement de très gros volumes non structurés.  
@@ -38,3 +35,6 @@ L'objectif étant développer un prototype de « Bayesian Database » capable de
 ## Points faibles
 
 - **La suite d'un projet** : Nécessité d’appréhender et d’adapter une architecture complexe pour poursuivre le développement.
+
+
+Auteur: Ilyes Khedhiri , Jesus Lucas , Shuaijun Guan
