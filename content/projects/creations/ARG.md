@@ -2,8 +2,8 @@
   "title": "Arg-Solver : Résolution d'extensions d'argumentation",
   "date": "2025-01-15",
   "range": "Septembre 2024 – Janvier 2025",
-  "image": "/img/skills/argumentation.png",
-  "description": "Implémentation d’un solveur Python pour les Abstract Argumentation Frameworks (.apx) : calcul et décision d’extensions complètes et stables, ainsi que vérification de crédulité et scepticisme.",
+  "image": "/img/skills/arg.png",
+  "description": "Implémentation d’un solveur Python pour les Abstract Argumentation Frameworks : calcul et décision d’extensions complètes et stables, ainsi que vérification de crédulité et scepticisme.",
   "tags": [
     "Argumentation Theory",
     "Abstract Argumentation",
@@ -24,15 +24,15 @@ Ce projet sert à résoudre les Abstract Argumentation Frameworks (AAF). Il calc
   - **DS-CO** : tester le scepticisme (Decide Skeptical)  
   - **SE-ST**, **DC-ST**, **DS-ST** pour la sémantique stable  
   - Interface CLI conforme au sujet : 
-    python arg.py -p XX-YY -f syste.txt [-a argument]
+    python arg.py -p XX-YY -f system.txt [-a argument]
  
 
 ## Utilisation
 ```bash
 git clone https://github.com/Elixyrrr/ArgSolver.git
 cd ArgSolver
-python arg.py -p SE-CO -f syste.apx
-python arg.py -p DC-ST -f syste.apx -a a
+python arg.py -p SE-CO -f system.txt
+python arg.py -p DC-ST -f system.txt -a a
 ```
 
 ## Conclusion & perspectives
