@@ -6,7 +6,7 @@
   "description": "Développement d’un service web de jeu d’échecs permettant à deux joueurs humains de s’affronter, avec sauvegarde/reprise de parties et options de rejouer chaque coup.",
   "tags": ["Node.js", "Express", "Socket.IO", "MongoDB", "REST", "Machine Learning"],
   "fact": "",
-  "featured": false
+  "featured": true
 }
 
 ## Contexte et objectifs
