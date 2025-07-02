@@ -1,22 +1,26 @@
 [
   {
+    "role": "Stage (Gestion de projet data / Déploiement BI & Infrastructure IT)",
+    "company": "[Groupe Cap Vert](https://groupe-capvert.com/) 38 rue Roger Hennequin, 78190 Trappes",
+    "summary": "- Assistance au déploiement d’une solution de BI\n- Mise en place de la gouvernance des données dans le cadre de l’intégration de Microsoft Copilot\n- Contribution à la centralisation des sites web\n- Rédaction de documentation technique et organisationnelle avec le management",
+    "range": "Juillet 2025 · 2 mois"
+  },
+  {
     "role": "Babysitter",
     "company": "Famille – Garde à domicile",
-    "summary": "Garde de deux enfants de 2 et 3 ans : organisation d’activités ludiques, aide aux repas et respect des routines quotidiennes.",
-    "range": "Juillet 2024 • 1 mois"
+    "summary": "Garde de deux enfants de 2 et 3 ans : organisation d’activités ludiques, aide aux repas, respect des routines quotidiennes.",
+    "range": "Juillet 2024 · 1 mois"
   },
-
   {
     "role": "Stage (Seconde)",
     "company": "Alter Way, Saint-Cloud (92)",
     "summary": "- Découverte de plusieurs métiers de l’informatique :\n  - Web Design\n  - Cybersécurité\n  - Administration Cloud",
-    "range": "Février 2018 • 2 semaines"
+    "range": "Février 2018 · 2 semaines"
   },
-
   {
     "role": "Stage (3ᵉ)",
     "company": "Global Knowledge, Rueil-Malmaison (92)",
-    "summary": "- Configuration de caméras de surveillance\n- Réinstallation de systèmes d’exploitation Windows / Linux",
-    "range": "Mars 2017 • 1 semaine"
+    "summary": "- Configuration de caméras de surveillance\n- Réinstallation de systèmes d’exploitation Windows/Linux",
+    "range": "Mars 2017 · 1 semaine"
   }
 ]
