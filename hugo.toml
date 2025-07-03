@@ -11,7 +11,7 @@ enableGitInfo = true
 [params]
 address = "Hauts-de-Seine, FR"
 email = "i.khedhiri@hotmail.fr"
-favicon = "/favicon.ico"
+favicon = "/favicon.png"
 firstName = "Ilyes"
 lastName = "Khedhiri"
 phone = "+33766099431"
@@ -26,7 +26,7 @@ sections = ["skills","creations","experience","education"]
 [params.google]
 
 [params.google.analytics]
-trackerID = "XX-123446-01"
+trackerID = "G-02XK16J0QB"
 
 
 [[params.handles]]
