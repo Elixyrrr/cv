@@ -213,17 +213,11 @@ a:hover, a:focus, a:active {
 
 
 img.qrcode {
-
-  mix-blend-mode: multiply;
-  
-  opacity: 0.75;
-  
-  
-  border: 1px solid rgba(255,255,255,0.1);
-  
-
-  background: none;
+  mix-blend-mode: normal !important;
+  opacity: 0.4 !important;
+  background: transparent;
 }
+
 
 
 
