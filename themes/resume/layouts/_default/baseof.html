@@ -23,6 +23,8 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
+     <link rel="preload" href="{{ "css/resume-override.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ "css/resume-override.css" | absURL }}"></noscript>
   <!-- Keeping old devicons for backward compatibility -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" integrity="sha512-JW3fT0YTK7pT7w437SoX6GcW76jOZ6E0jGmrqBAcloC4GKT+njHOY4fX5KxJ9WfIXTkNrAF994525fAHp+KCxg==" crossorigin="anonymous" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" integrity="sha512-JW3fT0YTK7pT7w437SoX6GcW76jOZ6E0jGmrqBAcloC4GKT+njHOY4fX5KxJ9WfIXTkNrAF994525fAHp+KCxg==" crossorigin="anonymous"></noscript>
@@ -32,13 +34,156 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous"></noscript>
   <!-- Custom styles for this template -->
-  <link rel="preload" href="{{ "css/resume-override.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ "css/resume-override.css" | absURL }}"></noscript>
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="preload" href="{{ "css/vanta-bg.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ "css/vanta-bg.css" | absURL }}"></noscript>
    <link rel="preload" href="{{ "css/tweaks.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ "css/tweaks.css" | absURL }}"></noscript>
+  <style>
+    /* =============== Layout Skills (Grid) =============== */
+    #skills .dev-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    /* =============== Cards de compétence =============== */
+    .list-inline-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(26,188,156,0.2);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateX(-150px) rotateY(-90deg) scale(0.5);
+    }
+
+    .list-inline-item.visible {
+      animation: slideInWave 1s cubic-bezier(0.175,0.885,0.32,1.275) forwards;
+    }
+
+    .list-inline-item:nth-child(1)  { animation-delay: 0.1s;  }
+    .list-inline-item:nth-child(2)  { animation-delay: 0.15s; }
+    /* … jusqu’à nth-child(12) … */
+
+    @keyframes slideInWave {
+      0%   { opacity: 0; transform: translateX(-150px) rotateY(-90deg) scale(0.5); }
+      30%  { opacity: 0.5; transform: translateX(-30px)  rotateY(-30deg) scale(0.8); }
+      60%  { opacity: 0.8; transform: translateX(20px)   rotateY(15deg) scale(1.1); }
+      80%  { opacity: 0.95;transform: translateX(-5px)   rotateY(-5deg)  scale(1.05); }
+      100% { opacity: 1;   transform: translateX(0)      rotateY(0deg)   scale(1); }
+    }
+
+    .list-inline-item:hover {
+      transform: translateY(-15px) scale(1.05) rotateY(5deg);
+      box-shadow:
+        0 20px 40px rgba(26,188,156,0.3),
+        0 0 30px rgba(26,188,156,0.2);
+      border-color: var(--accent);
+      background: rgba(26,188,156,0.1);
+    }
+
+    .list-inline-item i,
+    .list-inline-item .skill-image {
+      margin-bottom: 10px;
+      transition: transform 0.4s ease, filter 0.4s ease;
+      font-size: 2.2rem;
+      width: 40px; height: 40px;
+    }
+
+    .skill-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ccd6f6;
+      position: relative;
+      text-align: center;
+      transition: color 0.3s ease;
+    }
+    .skill-name::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), #00d4ff);
+      transition: width 0.3s ease;
+    }
+    .list-inline-item:hover .skill-name {
+      color: var(--accent);
+      text-shadow: 0 0 10px rgba(26,188,156,0.5);
+    }
+    .list-inline-item:hover .skill-name::after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      #skills .dev-icons {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 8px;
+      }
+      .list-inline-item {
+        padding: 8px;
+      }
+      .list-inline-item i,
+      .list-inline-item .skill-image {
+        font-size: 1.8rem;
+        width: 32px; height: 32px;
+        margin-bottom: 6px;
+      }
+      .skill-name {
+        font-size: 0.7rem;
+      }
+      @keyframes slideInWave {
+        from {
+          opacity: 0;
+          transform: translateX(-100px) scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0) scale(1);
+        }
+      }
+    }
+  </style>
+  <script>
+document.addEventListener('DOMContentLoaded', function(){
+  const items = document.querySelectorAll('.list-inline-item');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  items.forEach(item => observer.observe(item));
+});
+</script>
+
+ <canvas
+  id="nn-canvas"
+  data-bg='{{ "img/bgneural.png" | absURL }}'
+  style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;">
+</canvas>
+
+
+
+<script src='{{ "js/nn-anim.js" | relURL }}'></script>
 
 
 <script type="application/ld+json">
@@ -62,7 +207,7 @@
     {{ block "main" . }}
       {{ .Content }}
     {{ end }}
-    <section><span style="color: #999999;">Website created by Ilyes with Hugo theme</span>
+    <section><span style="color: #999999;"></span>
       {{ with $.GitInfo }}{{ with $.Site.Params.gitCommitPrefix }} | <span style="color: #999999;;">Page content generated from commit: <a href="{{ . }}/{{ $.GitInfo.AbbreviatedHash }}" title="log: {{ $.GitInfo.Subject }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ end }}{{end}}
     </section>
   </div>
@@ -72,7 +217,7 @@
   style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;">
 </canvas>
 
-<script src='{{ "js/nn-anim.js" | relURL }}'></script>
+
 
 
   <!-- Bootstrap core JavaScript -->

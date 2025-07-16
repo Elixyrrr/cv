@@ -1,49 +1,49 @@
 <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
   <div class="my-auto" id="skills-content">
-  <h2 class="mb-5">{{ i18n "skills" }}</h2>
+    <h2 class="mb-5">{{ i18n "skills" }}</h2>
     {{ $data := $.Data }}
     {{ range $data.skills }}
         <div class="subheading mb-3 skills-heading">{{ .grouping }}</div>
-            <ul>
-            {{ range .skills }}
-                {{ if isset . "name" }}
-                    {{ if isset . "image" }}
-                        <li class="list-inline-item">
-                          <img src="{{ .image }}" alt="{{ .name }}" class="skill-image">
-                          {{if isset . "link"}}
-                              <a href="{{.link}}" target="_blank">{{ .name }}</a>
-                          {{ else }}
-                              {{ .name }}
-                          {{ end }}
-                        </li>
-                    {{ else if isset . "class" }}
-                        <li class="list-inline-item">
-                          <i class="{{ .class }}"></i>
-                          {{if isset . "link"}}
-                              <a href="{{.link}}" target="_blank">{{ .name }}</a>
-                          {{ else }}
-                              {{ .name }}
-                          {{ end }}
-                        </li>
-                    {{ else }}
-                        {{ $devicon := cond (in $data.devicons (lower .icon)) (lower .icon) (cond (in $data.devicons (lower .name)) (lower .name) "terminal_badge") }}
-                        <li class="list-inline-item">
-                          <i class="devicons devicons-{{ $devicon }}"></i>
-                          {{if isset . "link"}}
-                              <a href="{{.link}}" target="_blank">{{ .name }}</a>
-                          {{ else }}
-                              {{ .name }}
-                          {{ end }}
-                        </li>
-                    {{ end }}
-                {{ else }}
-                  <li class="list-inline-item">
-                    <i class="devicons devicons-{{ cond (in $data.devicons (lower .)) (lower .) "terminal_badge" }}"></i>
-                    {{ . }}
-                  </li>
-                {{ end }}
-            {{ end }}
-            </ul>
+        <ul class="list-inline dev-icons">
+          {{ range $index, $skill := .skills }}
+              {{ if isset . "name" }}
+                  {{ if isset . "image" }}
+                      <li class="list-inline-item" style="animation-delay: {{ mul $index 0.1 }}s;">
+                        <img src="{{ .image }}" alt="{{ .name }}" class="skill-image">
+                        {{if isset . "link"}}
+                            <a href="{{.link}}" target="_blank">{{ .name }}</a>
+                        {{ else }}
+                            <span class="skill-name">{{ .name }}</span>
+                        {{ end }}
+                      </li>
+                  {{ else if isset . "class" }}
+                      <li class="list-inline-item" style="animation-delay: {{ mul $index 0.1 }}s;">
+                        <i class="{{ .class }}"></i>
+                        {{if isset . "link"}}
+                            <a href="{{.link}}" target="_blank">{{ .name }}</a>
+                        {{ else }}
+                            <span class="skill-name">{{ .name }}</span>
+                        {{ end }}
+                      </li>
+                  {{ else }}
+                      {{ $devicon := cond (in $data.devicons (lower .icon)) (lower .icon) (cond (in $data.devicons (lower .name)) (lower .name) "terminal_badge") }}
+                      <li class="list-inline-item" style="animation-delay: {{ mul $index 0.1 }}s;">
+                        <i class="devicons devicons-{{ $devicon }}"></i>
+                        {{if isset . "link"}}
+                            <a href="{{.link}}" target="_blank">{{ .name }}</a>
+                        {{ else }}
+                            <span class="skill-name">{{ .name }}</span>
+                        {{ end }}
+                      </li>
+                  {{ end }}
+              {{ else }}
+                <li class="list-inline-item" style="animation-delay: {{ mul $index 0.1 }}s;">
+                  <i class="devicons devicons-{{ cond (in $data.devicons (lower .)) (lower .) "terminal_badge" }}"></i>
+                  <span class="skill-name">{{ . }}</span>
+                </li>
+              {{ end }}
+          {{ end }}
+        </ul>
     {{ end }}
   </div>
 </section>

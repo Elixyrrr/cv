@@ -246,4 +246,82 @@ img.qrcode {
   }
 }
 
+/* Animations pour la section skills */
+.list-inline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Animation principale au hover */
+.list-inline-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.3);
+    border-color: #64ffda;
+}
+
+/* Animation des icônes devicons */
+.list-inline-item i.devicons {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+    color: #64ffda;
+}
+
+.list-inline-item:hover i.devicons {
+    transform: rotateY(360deg) scale(1.2);
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.8);
+}
+
+/* Animation des images de skills */
+.skill-image {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+    filter: brightness(0.8);
+}
+
+.list-inline-item:hover .skill-image {
+    transform: rotate(360deg) scale(1.2);
+    filter: brightness(1.2) drop-shadow(0 0 15px rgba(100, 255, 218, 0.6));
+}
+
+/* Animation des liens */
+.list-inline-item a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.list-inline-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #64ffda, #00d4ff);
+    transition: width 0.3s ease;
+}
+
+.list-inline-item:hover a::after {
+    width: 100%;
+}
+
+.list-inline-item:hover a {
+    color: #64ffda;
+}
 
