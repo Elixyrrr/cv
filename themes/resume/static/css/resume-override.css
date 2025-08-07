@@ -325,3 +325,55 @@ img.qrcode {
     color: #64ffda;
 }
 
+/* Animation pour les icônes Font Awesome spécifiquement */
+.list-inline-item:hover i.fa,
+.list-inline-item:hover i.fab, 
+.list-inline-item:hover i.fas,
+.list-inline-item:hover i.far,
+.list-inline-item:hover i[class*="fa-"] {
+    transform: rotateY(360deg) scale(1.2);
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.8);
+}
+
+/* S'assurer que toutes les icônes ont une transition */
+.list-inline-item i {
+    transition: all 0.4s ease;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* Pour garder la cohérence avec PowerBI */
+.list-inline-item i {
+    color: #64ffda;
+}
+/* MODIFIEZ cette règle dans votre fichier tweaks.css (document 4) */
+
+/* Animation principale au hover - AVEC rotation des icônes */
+.list-inline-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.3);
+    border-color: #64ffda;
+}
+
+/* AJOUTEZ cette règle pour la rotation des icônes */
+.list-inline-item:hover i,
+.list-inline-item:hover .skill-image {
+    transform: rotateY(360deg) scale(1.2);
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.8);
+}
+
+/* Spécifique pour les images */
+.list-inline-item:hover .skill-image {
+    transform: rotate(360deg) scale(1.2);
+    filter: brightness(1.2) drop-shadow(0 0 15px rgba(100, 255, 218, 0.6));
+}
+
+/* S'assurer que toutes les icônes ont la transition */
+.list-inline-item i,
+.list-inline-item .skill-image {
+    transition: all 0.4s ease;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
