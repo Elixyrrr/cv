@@ -277,6 +277,39 @@
     @media (max-width:768px){
       a{min-height:48px !important;min-width:48px !important;min-inline-size:48px !important;margin-inline:4px;line-height:48px}
     }
+    /* --- Fix 3D/Safari --- */
+.list-inline-item i,
+.list-inline-item .skill-image{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* --- Animations utilisées au tap --- */
+@keyframes spinY {
+  to { transform: rotateY(360deg) scale(1.2); }
+}
+@keyframes spin2D {
+  to { transform: rotate(360deg) scale(1.2); }
+}
+
+/* Classe appliquée par JS au tap */
+.tap-spinY { 
+  animation: spinY 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
+  filter: brightness(1.2) drop-shadow(0 0 15px rgba(100,255,218,.6));
+  color:#fff;
+}
+.tap-spin {
+  animation: spin2D 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
+  filter: brightness(1.2) drop-shadow(0 0 15px rgba(100,255,218,.6));
+  color:#fff;
+}
+
+/* Respecte l’accessibilité */
+@media (prefers-reduced-motion: reduce){
+  .tap-spinY, .tap-spin { animation: none !important; }
+}
+
   </style>
 
   <!-- Open Graph -->
@@ -384,6 +417,46 @@
   <script src='{{ "/js/nn-anim.js" | relURL }}' defer></script>
 
   <script async src="/js/resume.js"></script>
+  <script>
+  // Tap-to-spin sur mobile + support clavier (Enter/Espace)
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.list-inline-item');
+
+    cards.forEach((card) => {
+      const icon = card.querySelector('i, .skill-image');
+      if (!icon) return;
+
+      // Choix 3D si supporté, sinon 2D (iOS anciens)
+      const use3D = CSS && CSS.supports && CSS.supports('transform-style','preserve-3d');
+
+      const trigger = () => {
+        // Reset pour relancer l’anim si on retape rapidement
+        icon.classList.remove('tap-spinY','tap-spin');
+        // reflow
+        void icon.offsetWidth;
+        icon.classList.add(use3D ? 'tap-spinY' : 'tap-spin');
+      };
+
+      // Pointer (couvre touch + mouse)
+      card.addEventListener('pointerdown', trigger, { passive: true });
+
+      // Clavier (accessibilité)
+      card.setAttribute('tabindex','0'); // focusable si non-lien
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          trigger();
+        }
+      });
+
+      // Nettoyage à la fin de l’anim
+      icon.addEventListener('animationend', () => {
+        icon.classList.remove('tap-spinY','tap-spin');
+      });
+    });
+  });
+</script>
+
 
   {{ if .Site.Params.google.analytics.trackerID }}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google.analytics.trackerID }}"></script>
