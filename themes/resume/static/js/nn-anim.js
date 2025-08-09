@@ -34,8 +34,8 @@
       nodes.push({
         x: Math.random() * W,
         y: Math.random() * H,
-        baseRadius: radius,
-        originalRadius: radius,
+        baseRadius: radius,       // conservé mais plus modifié
+        originalRadius: radius,   // taille de base fixe
         vx: 0, vy: 0, attracted: false
       });
     }
@@ -49,14 +49,12 @@
   }
 
   // ajuste la résolution & redémarre les données
- function adjustSize() {
+  function adjustSize() {
     const dpr = window.devicePixelRatio || 1;
-    // taille réelle en CSS-pixels
     const { width: cw, height: ch } = canvas.getBoundingClientRect();
     if ( dpr !== lastDpr || cw !== W || ch !== H ) {
       lastDpr = dpr;
       W = cw; H = ch;
-      // taille du backing-store en device-pixels
       canvas.width  = Math.round(cw * dpr);
       canvas.height = Math.round(ch * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -95,7 +93,7 @@
   // boucle de dessin
   function draw() {
     // vérifier on-the-fly si la zone visuelle a bougé
-     adjustSize();
+    adjustSize();
 
     // fond
     const bg = ctx.createRadialGradient(
@@ -139,9 +137,10 @@
     });
 
     // pulses
-    pulses.forEach((p, idx) => {
+    for (let idx = pulses.length - 1; idx >= 0; idx--) {
+      const p = pulses[idx];
       p.t += p.speed;
-      if (p.t >= 1) return pulses.splice(idx, 1);
+      if (p.t >= 1) { pulses.splice(idx, 1); continue; }
       const A = nodes[p.i], B = nodes[p.j];
       const x = A.x + (B.x - A.x)*p.t;
       const y = A.y + (B.y - A.y)*p.t;
@@ -150,26 +149,27 @@
       ctx.arc(x, y, 1.5, 0, 2*Math.PI);
       ctx.fillStyle = `rgba(0,200,255,${a})`;
       ctx.fill();
-    });
+    }
 
-    // nœuds
+    // nœuds (taille FIXE + pas de cercle d'auréole)
     nodes.forEach(n => {
       const d = Math.hypot(n.x - mouse.x, n.y - mouse.y);
       if (mouse.active && d < 200) {
         const f = (200 - d)/200;
+        // répulsion légère sans changer la taille
         n.vx += (n.x - mouse.x)*0.0003*f;
         n.vy += (n.y - mouse.y)*0.0003*f;
-        n.baseRadius = n.originalRadius*(1 + f*0.5);
         n.attracted = true;
       } else {
         n.attracted = false;
-        n.baseRadius = n.originalRadius;
       }
+
       n.vx *= 0.95; n.vy *= 0.95;
       n.x += n.vx; n.y += n.vy;
 
       const pf  = 0.7 + 0.3*Math.sin(time + (n.x + n.y)*0.006);
-      const rad = n.baseRadius*(n.attracted ? pf*1.5 : pf);
+      const rad = n.originalRadius * pf; // taille reste basée sur originalRadius
+
       let a = 0.5 + 0.5*Math.sin(time*1.4 + (n.x - n.y)*0.006);
       if (n.attracted) a = Math.min(1, a + 0.3);
 
@@ -178,13 +178,8 @@
       ctx.fillStyle = `rgba(0,200,255,${a})`;
       ctx.fill();
 
-      if (n.attracted && d < 100) {
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, rad*2, 0, 2*Math.PI);
-        ctx.strokeStyle = `rgba(255,100,255,${0.3*(1 - d/100)})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
-      }
+      // --- cercle violet/rouge supprimé ---
+      // if (n.attracted && d < 100) { ... }  ← retiré
     });
 
     requestAnimationFrame(draw);
@@ -192,6 +187,3 @@
 
   requestAnimationFrame(draw);
 })();
-
-
-

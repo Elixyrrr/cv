@@ -21,119 +21,131 @@
       --border-color: rgba(100, 255, 218, 0.2);
     }
 
-    /* =============== Layout Skills (Grid) =============== */
+    /* =============== Layout Skills - BASE MOBILE FIRST =============== */
     #skills .dev-icons {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 16px;
-      padding: 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 20px 10px;
       margin: 0;
       list-style: none;
+      justify-items: center;
     }
 
-    /* =============== Cards de compétence - Base =============== */
+    /* =============== Cards de compétence - MOBILE FIRST =============== */
     .list-inline-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 16px 12px;
+      justify-content: space-between;
+      padding: 15px 8px;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 15px;
+      border-radius: 12px;
       backdrop-filter: blur(10px);
       position: relative;
       overflow: hidden;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       
+      /* Dimensions fixes pour mobile */
+      width: 100%;
+      max-width: 140px;
+      min-height: 100px;
+      
       /* Animation d'entrée */
       opacity: 0;
-      transform: translateX(-150px) rotateY(-90deg) scale(0.5);
+      transform: translateY(30px) scale(0.9);
+      
+      /* Optimisations tactiles */
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(100, 255, 218, 0.1);
+      touch-action: manipulation;
     }
 
-    /* =============== Animation d'apparition =============== */
+    /* =============== Animation d'apparition MOBILE =============== */
     .list-inline-item.visible {
-      animation: slideInWave 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      animation: slideInMobile 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     }
 
-    /* Délais d'animation échelonnés - réduits */
-    .list-inline-item:nth-child(1)  { animation-delay: 0.05s; }
-    .list-inline-item:nth-child(2)  { animation-delay: 0.1s; }
-    .list-inline-item:nth-child(3)  { animation-delay: 0.15s; }
-    .list-inline-item:nth-child(4)  { animation-delay: 0.2s; }
-    .list-inline-item:nth-child(5)  { animation-delay: 0.25s; }
-    .list-inline-item:nth-child(6)  { animation-delay: 0.3s; }
-    .list-inline-item:nth-child(7)  { animation-delay: 0.35s; }
-    .list-inline-item:nth-child(8)  { animation-delay: 0.4s; }
-    .list-inline-item:nth-child(9)  { animation-delay: 0.45s; }
-    .list-inline-item:nth-child(10) { animation-delay: 0.5s; }
-    .list-inline-item:nth-child(11) { animation-delay: 0.55s; }
-    .list-inline-item:nth-child(12) { animation-delay: 0.6s; }
+    /* Délais d'animation échelonnés pour mobile */
+    .list-inline-item:nth-child(1)  { animation-delay: 0.1s; }
+    .list-inline-item:nth-child(2)  { animation-delay: 0.2s; }
+    .list-inline-item:nth-child(3)  { animation-delay: 0.3s; }
+    .list-inline-item:nth-child(4)  { animation-delay: 0.4s; }
+    .list-inline-item:nth-child(5)  { animation-delay: 0.5s; }
+    .list-inline-item:nth-child(6)  { animation-delay: 0.6s; }
+    .list-inline-item:nth-child(7)  { animation-delay: 0.7s; }
+    .list-inline-item:nth-child(8)  { animation-delay: 0.8s; }
 
-    @keyframes slideInWave {
+    @keyframes slideInMobile {
       0% {
         opacity: 0;
-        transform: translateX(-150px) rotateY(-90deg) scale(0.5);
-      }
-      30% {
-        opacity: 0.5;
-        transform: translateX(-30px) rotateY(-30deg) scale(0.8);
-      }
-      60% {
-        opacity: 0.8;
-        transform: translateX(20px) rotateY(15deg) scale(1.1);
-      }
-      80% {
-        opacity: 0.95;
-        transform: translateX(-5px) rotateY(-5deg) scale(1.05);
+        transform: translateY(30px) scale(0.9);
       }
       100% {
         opacity: 1;
-        transform: translateX(0) rotateY(0deg) scale(1);
+        transform: translateY(0) scale(1);
       }
     }
 
-    /* =============== Animation Hover =============== */
-    .list-inline-item:hover {
-      transform: translateY(-15px) scale(1.08) rotateY(5deg);
+    /* =============== Animation Hover MOBILE =============== */
+    .list-inline-item:hover,
+    .list-inline-item:active {
+      transform: translateY(-8px) scale(1.03);
       box-shadow: 
-        0 25px 50px rgba(100, 255, 218, 0.3),
-        0 0 30px rgba(100, 255, 218, 0.2);
+        0 15px 30px rgba(100, 255, 218, 0.25),
+        0 0 20px rgba(100, 255, 218, 0.15);
       border-color: var(--accent);
-      background: rgba(100, 255, 218, 0.1);
+      background: rgba(100, 255, 218, 0.08);
     }
 
-    /* =============== Icônes et Images =============== */
+    /* =============== Icônes et Images MOBILE =============== */
     .list-inline-item i,
     .list-inline-item .skill-image {
-      font-size: 2.5rem;
-      width: 48px;
-      height: 48px;
-      margin-bottom: 12px;
+      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
       color: var(--accent);
-      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.3s ease;
       filter: brightness(0.9);
+      flex-shrink: 0;
     }
 
     .list-inline-item:hover i,
     .list-inline-item:hover .skill-image {
-      transform: rotateY(360deg) scale(1.2);
+      transform: scale(1.1);
       color: #ffffff;
-      filter: brightness(1.2) drop-shadow(0 0 15px rgba(100, 255, 218, 0.6));
-      text-shadow: 0 0 20px rgba(100, 255, 218, 0.8);
+      filter: brightness(1.2) drop-shadow(0 0 10px rgba(100, 255, 218, 0.4));
     }
 
-    /* =============== Nom des compétences =============== */
+    /* =============== Nom des compétences MOBILE FIRST =============== */
     .skill-name,
     .list-inline-item a {
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       color: var(--text-primary);
       text-decoration: none;
       text-align: center;
       position: relative;
       transition: all 0.3s ease;
+      
+      /* Gestion du texte multi-ligne */
+      white-space: normal !important;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      line-height: 1.1;
+      max-width: 100%;
+      
+      /* Flexbox pour centrage */
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
     }
 
     .skill-name::after,
@@ -152,89 +164,158 @@
     .list-inline-item:hover .skill-name,
     .list-inline-item:hover a {
       color: var(--accent);
-      text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+      text-shadow: 0 0 8px rgba(100, 255, 218, 0.4);
     }
 
     .list-inline-item:hover .skill-name::after,
     .list-inline-item:hover a::after {
-      width: 100%;
+      width: 80%;
     }
 
-    /* =============== Fix pour les cercles sur les logos About =============== */
+    /* =============== Section About - MOBILE =============== */
     .about-section .list-inline-item,
     section[id*="about"] .list-inline-item {
-      border-radius: 50% !important; /* Force les cercles pour la section About */
-      width: 80px;
-      height: 80px;
-      padding: 12px;
+      border-radius: 50% !important;
+      width: 70px !important;
+      height: 70px !important;
+      max-width: 70px !important;
+      padding: 10px !important;
+      min-height: auto !important;
     }
 
     .about-section .list-inline-item i,
     .about-section .skill-image,
     section[id*="about"] .list-inline-item i,
     section[id*="about"] .skill-image {
-      font-size: 2rem;
-      width: 40px;
-      height: 40px;
-      margin-bottom: 0;
+      font-size: 1.8rem !important;
+      width: 36px !important;
+      height: 36px !important;
+      margin-bottom: 0 !important;
     }
 
-    /* =============== Responsive Design =============== */
-    @media (max-width: 768px) {
+    .about-section .skill-name,
+    .about-section .list-inline-item a,
+    section[id*="about"] .skill-name,
+    section[id*="about"] .list-inline-item a {
+      display: none !important;
+    }
+
+    /* =============== RESPONSIVE SCALING =============== */
+
+    /* Tablettes et grands mobiles */
+    @media (min-width: 481px) {
       #skills .dev-icons {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
       }
       
       .list-inline-item {
-        padding: 12px 8px;
+        max-width: 120px;
+        min-height: 90px;
+        padding: 12px 6px;
       }
       
       .list-inline-item i,
       .list-inline-item .skill-image {
-        font-size: 2rem;
-        width: 40px;
-        height: 40px;
-        margin-bottom: 8px;
+        font-size: 1.9rem;
+        width: 38px;
+        height: 38px;
       }
       
       .skill-name,
       .list-inline-item a {
-        font-size: 0.75rem;
-      }
-      
-      /* Animation mobile simplifiée et plus rapide */
-      .list-inline-item.visible {
-        animation: slideInMobile 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-      }
-      
-      @keyframes slideInMobile {
-        0% {
-          opacity: 0;
-          transform: translateX(-100px) scale(0.8);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0) scale(1);
-        }
+        font-size: 0.7rem;
       }
     }
 
-    @media (max-width: 480px) {
+    /* Desktop */
+    @media (min-width: 769px) {
       #skills .dev-icons {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        gap: 8px;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 20px;
+        padding: 0;
       }
       
       .list-inline-item {
-        padding: 10px 6px;
+        max-width: none;
+        min-height: 120px;
+        padding: 16px 12px;
+        
+        /* Animation desktop */
+        transform: translateX(-150px) rotateY(-90deg) scale(0.5);
+      }
+      
+      .list-inline-item.visible {
+        animation: slideInWave 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+      
+      @keyframes slideInWave {
+        0% {
+          opacity: 0;
+          transform: translateX(-150px) rotateY(-90deg) scale(0.5);
+        }
+        30% {
+          opacity: 0.5;
+          transform: translateX(-30px) rotateY(-30deg) scale(0.8);
+        }
+        60% {
+          opacity: 0.8;
+          transform: translateX(20px) rotateY(15deg) scale(1.1);
+        }
+        80% {
+          opacity: 0.95;
+          transform: translateX(-5px) rotateY(-5deg) scale(1.05);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0) rotateY(0deg) scale(1);
+        }
+      }
+      
+      .list-inline-item:hover {
+        transform: translateY(-15px) scale(1.08) rotateY(5deg);
+        box-shadow: 
+          0 25px 50px rgba(100, 255, 218, 0.3),
+          0 0 30px rgba(100, 255, 218, 0.2);
       }
       
       .list-inline-item i,
       .list-inline-item .skill-image {
-        font-size: 1.8rem;
-        width: 36px;
-        height: 36px;
+        font-size: 2.5rem;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+      }
+      
+      .list-inline-item:hover i,
+      .list-inline-item:hover .skill-image {
+        transform: rotateY(360deg) scale(1.2);
+        filter: brightness(1.2) drop-shadow(0 0 15px rgba(100, 255, 218, 0.6));
+        text-shadow: 0 0 20px rgba(100, 255, 218, 0.8);
+      }
+      
+      .skill-name,
+      .list-inline-item a {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        line-height: 1.2;
+      }
+
+      .about-section .list-inline-item,
+      section[id*="about"] .list-inline-item {
+        width: 80px !important;
+        height: 80px !important;
+        max-width: 80px !important;
+        padding: 12px !important;
+      }
+
+      .about-section .list-inline-item i,
+      .about-section .skill-image,
+      section[id*="about"] .list-inline-item i,
+      section[id*="about"] .skill-image {
+        font-size: 2rem !important;
+        width: 40px !important;
+        height: 40px !important;
       }
     }
 
@@ -245,13 +326,21 @@
       .list-inline-item .skill-image,
       .skill-name,
       .list-inline-item a {
-        transition: none;
-        animation: none;
+        transition: none !important;
+        animation: none !important;
       }
       
       .list-inline-item {
-        opacity: 1;
-        transform: none;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* Amélioration contraste mode sombre */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-card: rgba(255, 255, 255, 0.08);
+        --border-color: rgba(100, 255, 218, 0.3);
       }
     }
     
@@ -319,8 +408,8 @@
   </script>
 
   
-
-  <script src='{{ "js/nn-anim.js" | relURL }}'></script>
+<script src='{{ "/js/nn-anim.js" | relURL }}'></script>
+  
 
   <script type="application/ld+json">
   {
