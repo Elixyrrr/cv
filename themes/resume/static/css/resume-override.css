@@ -377,3 +377,85 @@ img.qrcode {
     font-size: 2.2rem;
     margin-bottom: 10px;
 }
+
+/* 📱 Adaptation mobile pour les cartes de compétences */
+@media (max-width: 768px) {
+  
+  /* Grille plus compacte */
+  #skills .dev-icons {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    padding: 0 8px;
+  }
+
+  /* Cartes plus légères */
+  .list-inline-item {
+    padding: 10px 6px;
+    border-radius: 10px;
+    backdrop-filter: none; /* ⚡ Perf: on désactive flou sur mobile */
+    box-shadow: none;
+    transform: none !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  /* Icônes plus grandes pour tap targets */
+  .list-inline-item i,
+  .list-inline-item .skill-image {
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  /* Texte lisible */
+  .skill-name,
+  .list-inline-item a {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  /* Hover → juste un léger zoom (moins énergivore) */
+  .list-inline-item:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 18px rgba(100, 255, 218, 0.25);
+  }
+
+  /* Icônes → petit zoom sans 3D */
+  .list-inline-item:hover i,
+  .list-inline-item:hover .skill-image {
+    transform: scale(1.15);
+  }
+
+  /* Animation d'apparition simplifiée */
+  .list-inline-item.visible {
+    animation: fadeInUp 0.4s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* 📱 Très petits écrans */
+@media (max-width: 480px) {
+  #skills .dev-icons {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  .list-inline-item {
+    padding: 8px 4px;
+  }
+
+  .list-inline-item i,
+  .list-inline-item .skill-image {
+    font-size: 1.8rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .skill-name {
+    font-size: 0.7rem;
+  }
+}
