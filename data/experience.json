@@ -1,8 +1,8 @@
 [
   {
-    "role": "Stage (Gestion de projet data / Déploiement BI & Infrastructure IT)",
+    "role": "Stage (Gestion de projet data / Web & Infrastructure IT)",
     "company": "[Groupe Cap Vert](https://groupe-capvert.com/) 38 rue Roger Hennequin, 78190 Trappes",
-    "summary": "- Assistance au déploiement d’une solution de BI\n- Mise en place de la gouvernance des données dans le cadre de l’intégration de Microsoft Copilot\n- Contribution à la centralisation des sites web\n- Rédaction de documentation technique et organisationnelle avec le management",
+    "summary": "- Création d’un dashboard des sites d’entités avec Streamlit\n- Centralisation des sites web des entités du groupe\n- Mise en place de la gouvernance des données autour de Microsoft Copilot 365\n- Développement web d’une cartographie du groupe\n- Contribution à l’urbanisation et à la structuration de l’équipe SI\n- Tâches transverses :\n  - Maquette Figma\n  - Activation de la MFA chez les utilisateurs",
     "range": "Juillet 2025 · 2 mois"
   },
   {
