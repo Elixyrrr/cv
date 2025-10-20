@@ -35,9 +35,14 @@ trackerID = "G-02XK16J0QB"
 
 [[params.handles]]
   name     = "CV"
-  link     = "/cv.pdf"
-  icon     = "download"      # ← plus que "download"
-  download = "cv.pdf"
+  link     = "/CV_Ilyes.pdf"
+  icon     = "download"      
+  download = "CV_Ilyes.pdf"
+
+[[params.handles]]
+  name = "LinkedIn"
+  link = "https://www.linkedin.com/in/ilyes-khedhiri"
+  icon = "linkedin"
 
 
 
