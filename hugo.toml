@@ -34,10 +34,10 @@ trackerID = "G-02XK16J0QB"
   link     = "https://github.com/Elixyrrr"
 
 [[params.handles]]
-  name     = "CV_Ilyes"
-  link     = "/CV_Ilyes.pdf"
+  name     = "CV"
+  link     = "/CV_ILYES.pdf"
   icon     = "download"      
-  download = "CV_Ilyes.pdf"
+  download = "CV_ILYES.pdf"
 
 [[params.handles]]
   name = "LinkedIn"
