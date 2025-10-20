@@ -99,8 +99,8 @@
       display:inline-block !important;opacity:1 !important;visibility:visible !important
     }
     .list-social-icons .fa-stack{display:inline-block !important;font-size:inherit !important}
-    .fa-stack .fa-circle{color:#495057 !important}
     .fa-stack .fa-inverse{color:#fff !important}
+    .fa-stack .fa-circle{color:rgba(0, 0, 0, 0.05) !important}
 
     /* ---------- Skills grid ---------- */
     #skills .dev-icons{
@@ -113,10 +113,9 @@
     .list-inline-item{
       display:flex;flex-direction:column;align-items:center;
       padding:16px 12px;margin:0;
-      background:var(--bg-card);border:1px solid var(--border-color);
-      border-radius:15px;backdrop-filter:blur(10px);
+     
       position:relative;overflow:hidden;
-      transition:transform .4s cubic-bezier(.175,.885,.32,1.275), box-shadow .4s, border-color .4s, background .4s;
+ 
 
       /* Entrée */
       opacity:0;transform:translateX(-150px) rotateY(-90deg) scale(.5);
@@ -213,9 +212,9 @@
       }
       .list-inline-item{
         padding:10px 8px;border-radius:12px;
-        backdrop-filter:none; /* perf */
-        box-shadow:none;      /* clean */
-        transform:none;       /* calmer */
+        backdrop-filter:none; 
+        box-shadow:none;     
+        transform:none;     
       }
       .list-inline-item i,
       .list-inline-item .skill-image{
