@@ -35,9 +35,9 @@ trackerID = "G-02XK16J0QB"
 
 [[params.handles]]
   name     = "CV"
-  link     = "/CV_Ilyess.pdf"
+  link     = "/cv_Ilyesss.pdf"
   icon     = "download"      
-  download = "CV_Ilyess.pdf"
+  download = "cv_Ilyesss.pdf"
 
 [[params.handles]]
   name = "LinkedIn"
