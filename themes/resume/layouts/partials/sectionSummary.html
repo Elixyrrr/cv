@@ -13,7 +13,7 @@
   {{ if gt .Pages $featuredPages }}
     <div class="my-auto">
       <h3>Liste des Projets</h3>
-      <p>Voir  <a href="{{ .Permalink }}">tous les {{ .Title | pluralize }}</a> </p>
+      <p>Voir  <a href="{{ .Permalink }}">tous les projets {{ .Title | pluralize }}</a> </p>
     </div>
   {{ end }}
 </section>
