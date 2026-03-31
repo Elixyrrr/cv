@@ -4,10 +4,15 @@
   "range": "Janvier – Avril 2025",
   "image": "/img/skills/depres.png",
   "description": "Projet visant à repérer automatiquement dans des tweets et des posts des indices de détresse psychologique afin d’alerter précocement les personnes concernées.",
-  "tags": ["NLP", "Machine Learning", "Deep Learning","Big Data"],
+  "tags": ["NLP", "Machine Learning", "Deep Learning", "Big Data", "TF-IDF", "FastText", "Transformers", "Classification"],
   "featured": false
 }
 
-Ce projet consistait à développer un outil capable d’analyser des contenus publiés sur les réseaux sociaux pour détecter des messages témoignant de signes dépressifs, en utilisant des techniques de deep learning tels que "FCL" ou bien de machine learning tels que "SVM" et "Random Forest"
+## Réalisations
 
-Auteur: Ilyes Khedhiri , Muzzammil Mougamadou , Ilyes Tahar-Lehlour, Thibhan Ponnampalam
+- Collecte, nettoyage et préparation de corpus issus des réseaux sociaux (prétraitement NLP, gestion du déséquilibre de classes).
+- Entraînement et évaluation de modèles de classification : SVM, Random Forest, CNN, LSTM et architectures Transformer, avec représentations TF-IDF, FastText et modèles Transformers.
+
+Ce projet visait à analyser des contenus publiés sur les réseaux sociaux pour repérer des signes dépressifs et alerter précocement les personnes concernées.
+
+Auteur : Ilyes Khedhiri, Muzzammil Mougamadou, Ilyes Tahar-Lehlour, Thibhan Ponnampalam

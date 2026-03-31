@@ -1,0 +1,34 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+  <style>
+    .education-row{display:flex;align-items:center;gap:.85rem;margin-bottom:.5rem}
+    .education-logo-wrap{flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .education-logo-img{width:48px;height:48px;object-fit:contain;margin:0}
+    .education-school-text{flex:1;min-width:0;line-height:1.35}
+    .education-school-text p{margin-bottom:0}
+    @media (max-width:767.98px){.education-row{align-items:flex-start}}
+  </style>
+  <div class="my-auto">
+    <h2 class="mb-5">{{ i18n "education" }}</h2>
+    {{ range site.Data.education }}
+      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+        <div class="resume-content mr-auto">
+          <div class="education-row">
+            {{ with .logo }}
+            <div class="education-logo-wrap">
+              <img class="education-logo-img" src="{{ . }}" alt="" width="48" height="48" loading="lazy" decoding="async">
+            </div>
+            {{ end }}
+            <h3 class="mb-0 education-school-text">{{ .school | markdownify }}</h3>
+          </div>
+          <div class="subheading mb-3">{{ .degree }}</div>
+          <div>{{ .major | markdownify }}</div>
+          <p>{{ .notes | markdownify }}</p>
+        </div>
+        <div class="resume-date text-md-right">
+          <span class="text-primary">{{ .range }}</span>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</section>
+

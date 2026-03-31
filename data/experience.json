@@ -1,6 +1,14 @@
 [
   {
+    "role": "Stage (Software/Data Engineer)",
+    "logo": "/img/logos/lipade.png",
+    "company": "[LIPADE](https://lipade.mi.parisdescartes.fr/) 45 rue des Saints-Pères, 75006 Paris",
+    "summary": "- Implémentation de la composante Privacy-Preserving Data Analytics (PPDA) du projet européen RECITALS pour la protection des identités numériques\n- Encadrement d’étudiants de Master 1\n- Développement de pipelines ETL conformes au RGPD (privacy by design) pour l’ingestion, la vérification et la préparation de données et orchestration avec Apache Airflow\n- Génération de données synthétiques et analyses exploratoires sur des jeux de données anonymisés ou chiffrés afin de préserver la confidentialité tout en gardant la valeur analytique\n- Mise en place de CI/CD (GitHub Actions), containerisation Docker/Docker Compose, documentation technique pour les partenaires\n- Collaboration régulière en anglais avec des partenaires européens industriels et académiques"
+    ,"range": "Février 2026 · 6 mois"
+  },
+  {
     "role": "Stage (Gestion de projet data / Web & Infrastructure IT)",
+    "logo": "/img/logos/capvert.png",
     "company": "[Groupe Cap Vert](https://groupe-capvert.com/) 38 rue Roger Hennequin, 78190 Trappes",
     "summary": "- Création d’un dashboard des sites d’entités avec Streamlit\n- Centralisation des sites web des entités du groupe\n- Mise en place de la gouvernance des données autour de Microsoft Copilot 365\n- Développement web d’une cartographie du groupe\n- Contribution à l’urbanisation et à la structuration de l’équipe SI\n- Tâches transverses :\n  - Maquette Figma\n  - Activation de la MFA chez les utilisateurs",
     "range": "Juillet 2025 · 2 mois"
@@ -13,12 +21,14 @@
   },
   {
     "role": "Stage (Seconde)",
+    "logo": "/img/logos/alterway.png",
     "company": "[Alter Way](https://www.alterway.fr/), Saint-Cloud (92)",
     "summary": "- Découverte de plusieurs métiers de l’informatique :\n  - Web Design\n  - Cybersécurité\n  - Administration Cloud",
     "range": "Février 2018 · 2 semaines"
   },
   {
     "role": "Stage (3ᵉ)",
+    "logo": "/img/logos/globalknowledge.jpg",
     "company": "[Global Knowledge](https://www.globalknowledge.com/fr-fr), Rueil-Malmaison (92)",
     "summary": "- Configuration de caméras de surveillance\n- Réinstallation de systèmes d’exploitation Windows/Linux",
     "range": "Mars 2017 · 1 semaine"

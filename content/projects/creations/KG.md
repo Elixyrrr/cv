@@ -21,7 +21,9 @@
 
 ## Contexte et objectifs
 
-Nous avons implémenté un pipeline **Retrieval-Augmented Generation (RAG) avec LangChain et en local** afin d’enrichir les prompts d’un LLM à partir d’un Graphe de Connaissance pour réduire les hallucinations et améliorer la précision factuelle.  
+Nous avons implémenté un pipeline **Retrieval-Augmented Generation (RAG) avec LangChain et en local** afin d’enrichir les prompts d’un LLM à partir d’un Graphe de Connaissance pour réduire les hallucinations et améliorer la précision factuelle.
+
+En parallèle : conception de prompts et développement d’agents LLM avec LangChain et des modèles locaux via Ollama.
 
 ## Stack technique
 Pour ce faire on a utilisé:
